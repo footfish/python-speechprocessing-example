@@ -15,7 +15,13 @@ pip install numpy
 pip install scipy
 pip install matplotlib
 ```
+Clone and run
 
+```
+git clone https://github.com/footfish/python-speechprocessing-example.git
+cd python-speechprocessing-example/src/
+python rawsignal-example.py
+```
 ## Results
 Using the [sample .wav](src/1234.wav) file provided (1,2,3,4 spoken in English).
 
