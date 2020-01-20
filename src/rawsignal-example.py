@@ -79,8 +79,21 @@ mfcc = dct(filter_banks, type=2, axis=1, norm='ortho')[:, 1 : (num_ceps + 1)] # 
 #lift = 1 + (cep_lifter / 2) * numpy.sin(numpy.pi * n / cep_lifter)
 #mfcc *= lift  #*
 
-#-- Plots 
 
+#-- Print some details 
+print("Sound file duration " + str(len(signal) / sample_rate) + "(secs), " + str(len(signal)) + " samples")
+print("Sampling rate " + str(sample_rate) + "Hz ("+ str(sample_rate) +" samples per sec)" )
+print("-Framing-")
+print("Frame length: " +str(frame_length) + " samples, " + str(round(frame_size*1000)) + 'ms')
+print("Frame overlapp: " +str(round((frame_size-frame_stride)*1000)) + "ms")
+print("No. of frames: " +str(num_frames))
+print("-Filter Banks-")
+print("No. of filter banks: " + str(nfilt) + " (spectogram array size)")
+print("-MCC's-")
+print("No. of coeffecients: " + str(num_ceps))
+
+
+#-- Plots 
 plot.figure(1,[12, 6]) #plot 1st frame 
 
 plot.subplot(321)
@@ -157,17 +170,6 @@ plot.xlabel("Time")
 
 plot.show() 
 
-#-- Print some details 
-print("Sound file duration " + str(len(signal) / sample_rate) + "(secs), " + str(len(signal)) + " samples")
-print("Sampling rate " + str(sample_rate) + "Hz ("+ str(sample_rate) +" samples per sec)" )
-print("-Framing-")
-print("Frame length: " +str(frame_length) + " samples, " + str(round(frame_size*1000)) + 'ms')
-print("Frame overlapp: " +str(round((frame_size-frame_stride)*1000)) + "ms")
-print("No. of frames: " +str(num_frames))
-print("-Filter Banks-")
-print("No. of filter banks: " + str(nfilt) + " (spectogram array size)")
-print("-MCC's-")
-print("No. of coeffecients: " + str(num_ceps))
 
 
 

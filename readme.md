@@ -32,9 +32,11 @@ No. of filter banks: 40 (spectogram array size)
 No. of coeffecients: 12
 
 ```
+### Plot frame #1 step-by-step processing
  Plot of steps for processing the first frame of speech. Frame length 200 samples (25ms) results in 12 Mel-frequency Cepstral Coefficients. 
 ![Figure 1 First Frame](./images/Figure_1_frame.png)
 
+### Plot full sample step-by-step processing
 Plot of steps for processing whole speech sample (above steps repeated on every frame)
 ![Figure 2 Signal](./images/Figure_2_signal.png)
 
